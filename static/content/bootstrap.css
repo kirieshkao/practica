@@ -2022,8 +2022,6 @@ textarea.input-lg {
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
-
-.btn:hover,
 .btn:focus {
   color: #333333;
   text-decoration: none;

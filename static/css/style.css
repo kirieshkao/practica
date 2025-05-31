@@ -1,6 +1,6 @@
-/* ===== Base Styles ===== */
+/* ===== Базовые стили ===== */
 :root {
-    /* Colors */
+    /* Цвета, отступы, типографика, границы, тени (все tpl: base.tpl, index.tpl, calculator1.tpl, calculator2.tpl, calculator3.tpl, about.tpl) */
     --primary: #4e42b9;
     --primary-light: #6750a4;
     --primary-dark: #3a2d8a;
@@ -13,14 +13,14 @@
     --light: #ffffff;
     --border: #e2e8f0;
     --shadow-color: rgba(0, 0, 0, 0.1);
-    /* Spacing */
+    /* Отступы */
     --space-xs: 0.5rem;
     --space-sm: 1rem;
     --space-md: 1.5rem;
     --space-lg: 2rem;
     --space-xl: 3rem;
     --space-xxl: 4rem;
-    /* Typography */
+    /* Типографика */
     --text-xs: 0.75rem;
     --text-sm: 0.875rem;
     --text-base: 1rem;
@@ -29,20 +29,20 @@
     --text-xxl: 1.5rem;
     --text-xxxl: 2rem;
     --text-hero: 3rem;
-    /* Borders */
+    /* Границы */
     --radius-sm: 0.25rem;
     --radius-md: 0.5rem;
     --radius-lg: 0.75rem;
     --radius-xl: 1rem;
     --radius-full: 9999px;
-    /* Shadows */
+    /* Тени */
     --shadow-sm: 0 1px 3px var(--shadow-color);
     --shadow-md: 0 4px 6px var(--shadow-color);
     --shadow-lg: 0 10px 15px var(--shadow-color);
     --shadow-xl: 0 20px 25px var(--shadow-color);
 }
 
-/* Reset and base styles */
+/* Сброс и базовые стили (все tpl: base.tpl, index.tpl, calculator1.tpl, calculator2.tpl, calculator3.tpl, about.tpl) */
 * {
     margin: 0;
     padding: 0;
@@ -77,9 +77,9 @@ img {
     padding: 0 var(--space-md);
 }
 
-/* ===== Components ===== */
+/* ===== Компоненты ===== */
 
-/* Buttons */
+/* Кнопки (все tpl: index.tpl, calculator1.tpl, calculator2.tpl, calculator3.tpl, about.tpl) */
 .btn {
     display: inline-flex;
     align-items: center;
@@ -93,8 +93,7 @@ img {
     border: 2px solid transparent;
 }
 
-
-/* Sections */
+/* Секции (все tpl: index.tpl, calculator1.tpl, calculator2.tpl, calculator3.tpl, about.tpl) */
 .section {
     padding: var(--space-xxl) 0;
 }
@@ -116,11 +115,11 @@ img {
     line-height: 1.5;
 }
 
-/* Hero Section */
+/* Геройская секция (index.tpl) */
 .hero {
     background: linear-gradient(135deg, var(--primary), var(--primary-light));
     color: var(--light);
-    padding: var(--space-xxl) 0;
+    padding: var(--space-xl) 0;
     position: relative;
     overflow: hidden;
 }
@@ -137,82 +136,77 @@ img {
     font-size: var(--text-hero);
     font-weight: 700;
     line-height: 1.2;
-    margin-bottom: var(--space-md);
-}
-
-.hero-subtitle {
-    font-size: var(--text-xl);
-    opacity: 0.9;
-    margin-bottom: var(--space-xl);
+    margin-bottom: var(--space-sm);
 }
 
 .hero-buttons {
     display: flex;
-    gap: var(--space-md);
+    gap: var(--space-sm);
     justify-content: center;
+    margin-top: var(--space-md);
 }
 
-/* Features Section */
+/* Секция преимуществ (index.tpl) */
 .features-section {
     background-color: var(--light);
 }
-
+/*сетка для карточек*/
 .features-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: var(--space-xl);
+    display: grid; /*в виде сетки*/
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /*под ширину экрана*/
+    gap: var(--space-xl); /*отсупы между карточками*/
 }
 
-.feature-card {
+.feature-card { /*оформление отдельной карточки*/
     background: var(--light);
     border-radius: var(--radius-xl);
     overflow: hidden;
     box-shadow: var(--shadow-md);
     transition: all 0.3s ease;
 }
-
+    /*эффект для карточки*/
     .feature-card:hover {
-        transform: translateY(-5px);
-        box-shadow: var(--shadow-lg);
+        transform: translateY(-5px); /*поднимает карточку*/
+        box-shadow: var(--shadow-lg); /*увеличивает тень*/
     }
-
+/*блок для изображений */
 .feature-image {
     height: 200px;
     overflow: hidden;
 }
-
+    /*анимация картинок*/
     .feature-image img {
         width: 100%;
         height: 100%;
         object-fit: cover;
         transition: transform 0.5s ease;
     }
-
+    /*увеличение изображения*/
 .feature-card:hover .feature-image img {
     transform: scale(1.05);
 }
-
+/*текст внутри карточки*/
 .feature-content {
     padding: var(--space-lg);
 }
-
+/*заголовки*/
 .feature-title {
     font-size: var(--text-xl);
     font-weight: 600;
     color: var(--primary);
     margin-bottom: var(--space-sm);
 }
-
+/*описание*/
 .feature-text {
     color: var(--text-light);
     line-height: 1.6;
 }
 
-/* Steps Section */
+/* Секция шагов (index.tpl) */
 .steps-section {
     background-color: var(--secondary);
 }
-
+/*контейнер с шагами*/
 .steps-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -226,7 +220,7 @@ img {
     align-items: center;
     text-align: center;
 }
-
+/*блок с номером шага*/
 .step-number {
     width: 50px;
     height: 50px;
@@ -240,7 +234,7 @@ img {
     font-weight: 700;
     margin-bottom: var(--space-md);
 }
-
+/*картинки для шага*/
 .step-image {
     width: 100%;
     height: 200px;
@@ -248,26 +242,26 @@ img {
     overflow: hidden;
     margin-bottom: var(--space-md);
 }
-
+/*заголовок шага*/
 .step-title {
     font-size: var(--text-lg);
     font-weight: 600;
     color: var(--primary);
     margin-bottom: var(--space-sm);
 }
-
+/*описание*/
 .step-text {
     color: var(--text-light);
     line-height: 1.6;
 }
 
-/* Calculators Section */
+/* Секция с карточками калькуляторов (index.tpl) */
 .calculators-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: var(--space-xl);
 }
-
+/*одна карточка калькулятора*/
 .calculator-card {
     background: var(--light);
     border-radius: var(--radius-xl);
@@ -275,45 +269,44 @@ img {
     box-shadow: var(--shadow-md);
     transition: all 0.3s ease;
 }
-
+/*эффект для карточки*/
     .calculator-card:hover {
         transform: translateY(-5px);
         box-shadow: var(--shadow-lg);
     }
-
+/*для изображения*/
 .calculator-image {
     height: 200px;
     overflow: hidden;
 }
-
     .calculator-image img {
         width: 100%;
         height: 100%;
         object-fit: cover;
         transition: transform 0.5s ease;
     }
-
+/*увеличивает картинку*/
 .calculator-card:hover .calculator-image img {
     transform: scale(1.05);
 }
-
+/*соедржимое карточки*/
 .calculator-content {
     padding: var(--space-lg);
 }
-
+/*название калькулятора*/
 .calculator-title {
     font-size: var(--text-xl);
     font-weight: 600;
     color: var(--primary);
     margin-bottom: var(--space-sm);
 }
-
+/*описание калькулятора*/
 .calculator-text {
     color: var(--text-light);
     margin-bottom: var(--space-md);
     line-height: 1.6;
 }
-
+/*блок с доп инфой*/
 .calculator-meta {
     display: flex;
     gap: var(--space-md);
@@ -328,71 +321,8 @@ img {
     color: var(--text-light);
 }
 
-/* Testimonials Section */
-.testimonials-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: var(--space-xl);
-    margin-top: var(--space-xxl);
-}
 
-.testimonial-card {
-    background: var(--light);
-    border-radius: var(--radius-xl);
-    padding: var(--space-lg);
-    box-shadow: var(--shadow-md);
-}
-
-.testimonial-content {
-    font-style: italic;
-    color: var(--text);
-    margin-bottom: var(--space-lg);
-    position: relative;
-}
-
-    .testimonial-content:before {
-        content: '"';
-        font-size: 4rem;
-        color: var(--primary);
-        opacity: 0.2;
-        position: absolute;
-        top: -1.5rem;
-        left: -0.5rem;
-        line-height: 1;
-    }
-
-.testimonial-author {
-    display: flex;
-    align-items: center;
-    gap: var(--space-md);
-}
-
-.author-avatar {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    overflow: hidden;
-    flex-shrink: 0;
-}
-
-    .author-avatar img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-
-.author-info h4 {
-    font-size: var(--text-lg);
-    color: var(--primary);
-    margin-bottom: var(--space-xs);
-}
-
-.author-info p {
-    color: var(--text-light);
-    font-size: var(--text-sm);
-}
-
-/* CTA Section */
+/* Секция призыва к действию (index.tpl) */
 .cta-section {
     background-color: var(--primary);
     color: var(--light);
@@ -442,7 +372,7 @@ img {
         object-fit: cover;
     }
 
-/* ===== Responsive Styles ===== */
+/* ===== Адаптивные стили ===== */
 @media (max-width: 992px) {
     .cta-card {
         grid-template-columns: 1fr;
@@ -501,8 +431,8 @@ img {
         padding: var(--space-lg);
     }
 }
-/* ===== About Page Styles ===== */
 
+/* ===== Стили страницы "О нас" ===== */
 .about-section {
     padding: var(--space-xxl) 0;
 }
@@ -559,7 +489,7 @@ img {
         margin-bottom: var(--space-sm);
     }
 
-/* Team Section */
+/* Секция команды (about.tpl) */
 .team-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -631,7 +561,7 @@ img {
     margin-top: var(--space-xxl);
 }
 
-/* Applications Section */
+/* Секция приложений (about.tpl) */
 .applications-section {
     background-color: var(--secondary);
 }
@@ -689,7 +619,7 @@ img {
         color: var(--accent-dark);
     }
 
-/* Feature Links */
+/* Ссылки функций и шагов (index.tpl) */
 .feature-link, .step-link {
     color: var(--accent);
     font-weight: 500;
@@ -704,19 +634,12 @@ img {
         text-decoration: underline;
     }
 
-
-
-
-
-
-    /*3 калькулятор*/
-/* ===== Calculator 3 Styles ===== */
-
+/* ===== Стили калькулятора 3 ===== */
 .calculator-section {
     padding: var(--space-xl) 0;
 }
 
-/* Theory Section */
+/* Секция теории (calculator1.tpl, calculator2.tpl, calculator3.tpl) */
 .theory-section {
     background-color: var(--light);
     border-radius: var(--radius-xl);
@@ -819,7 +742,7 @@ img {
         display: block;
     }
 
-/* Calculator Form */
+/* Форма калькулятора (calculator1.tpl, calculator2.tpl, calculator3.tpl) */
 .calculator-form {
     background-color: var(--light);
     border-radius: var(--radius-xl);
@@ -836,7 +759,7 @@ img {
     gap: var(--space-sm);
 }
 
-/* Data Input Section */
+/* Секция ввода данных (calculator1.tpl, calculator2.tpl, calculator3.tpl) */
 .data-input-section {
     margin-bottom: var(--space-xl);
 }
@@ -860,35 +783,52 @@ img {
 .data-table-container {
     margin-bottom: var(--space-md);
     overflow-x: auto;
+    max-width: 600px; /* Добавлено ограничение максимальной ширины */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.data-table-container {
+    margin-bottom: var(--space-md);
+    overflow-x: auto;
+    max-width: 800px; /* Увеличено с 600px */
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .data-table {
-    width: 100%;
+    width: 100%; /* Возвращаем 100% вместо auto */
+    min-width: 600px; /* Увеличено с 400px */
     border-collapse: collapse;
     margin-bottom: var(--space-sm);
 }
 
     .data-table th,
     .data-table td {
-        padding: var(--space-sm);
+        padding: var(--space-md); /* Увеличено с var(--space-sm) */
         border: 1px solid var(--border);
         text-align: center;
+        min-height: 50px; /* Добавлена минимальная высота строк */
+    }
+
+    .data-table tbody tr {
+        height: 50px; /* Фиксированная высота строк */
     }
 
     .data-table th {
         background-color: var(--primary);
         color: var(--light);
+        padding: var(--space-md) var(--space-sm); /* Больше отступы */
     }
 
     .data-table input {
         width: 100%;
-        padding: var(--space-xs) var(--space-sm);
+        padding: var(--space-sm) var(--space-md); /* Увеличено */
         border: 1px solid var(--border);
         border-radius: var(--radius-sm);
         text-align: center;
-    }
-
-.btn-remove-row {
+        height: 100%; /* Занимает всю высоту ячейки */
+    }.btn-remove-row {
     color: var(--error);
     padding: 0;
     width: 24px;
@@ -911,7 +851,7 @@ img {
     display: none;
 }
 
-/* Prediction Section */
+/* Секция прогноза (calculator3.tpl) */
 .prediction-section {
     margin-bottom: var(--space-xl);
 }
@@ -941,7 +881,7 @@ img {
     color: var(--text-light);
 }
 
-/* Calculation Actions */
+/* Действия расчёта (calculator1.tpl, calculator2.tpl, calculator3.tpl) */
 .calculation-actions {
     display: flex;
     gap: var(--space-md);
@@ -950,11 +890,13 @@ img {
 }
 
 .btn-calculate {
-    font-size: var(--text-lg);
-    padding: var(--space-md) var(--space-xl);
+    font-size: var(--text-md); /* Размер текста как у обычных кнопок */
+    padding: var(--space-sm) var(--space-md); /* Отступы как у обычных кнопок */
+    background-color: var(--primary); /* Цвет фона (оставляем ваш) */
+    color: var(--light); /* Цвет текста (оставляем ваш) */
 }
 
-/* Results Section */
+/* Секция результатов (calculator1.tpl, calculator2.tpl, calculator3.tpl) */
 .results-section {
     display: none;
 }
@@ -968,7 +910,7 @@ img {
         gap: var(--space-sm);
     }
 
-/* Tabs */
+/* Вкладки (calculator3.tpl) */
 .nav-tabs {
     display: flex;
     border-bottom: 1px solid var(--border);
@@ -995,7 +937,7 @@ img {
     margin-bottom: var(--space-xl);
 }
 
-/* Models Comparison */
+/* Сравнение моделей (calculator3.tpl) */
 .models-comparison {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -1037,7 +979,7 @@ img {
     padding: var(--space-lg);
 }
 
-/* Prediction Results */
+/* Таблица прогнозов (calculator3.tpl) */
 .prediction-table {
     width: 100%;
     border-collapse: collapse;
@@ -1059,7 +1001,7 @@ img {
         background-color: rgba(78, 66, 185, 0.05);
     }
 
-/* Chart */
+/* График (calculator1.tpl, calculator2.tpl, calculator3.tpl) */
 .chart-container {
     margin-top: var(--space-xl);
 }
@@ -1110,7 +1052,7 @@ img {
         background-color: #9f7aea;
     }
 
-/* Responsive */
+/* Адаптивность (calculator1.tpl, calculator2.tpl, calculator3.tpl) */
 @media (max-width: 768px) {
     .theory-header {
         flex-direction: column;
@@ -1126,9 +1068,8 @@ img {
         width: 100%;
     }
 }
-/* Добавьте эти стили в ваш файл CSS */
 
-/* Example Section Styles */
+/* Секция примеров (calculator1.tpl, calculator2.tpl, calculator3.tpl) */
 .example-section {
     margin-top: var(--space-xl);
     background-color: var(--light);
@@ -1221,7 +1162,7 @@ img {
         margin: var(--space-sm) 0;
     }
 
-/* Улучшения для калькулятора */
+/* Улучшения для калькулятора (calculator1.tpl, calculator2.tpl, calculator3.tpl) */
 .form-control {
     transition: border-color 0.3s ease;
 }
@@ -1264,7 +1205,7 @@ img {
     width: 20%;
 }
 
-/* Адаптивность */
+/* Адаптивность (calculator1.tpl, calculator2.tpl, calculator3.tpl) */
 @media (max-width: 768px) {
     .example-results {
         grid-template-columns: 1fr;
@@ -1274,6 +1215,7 @@ img {
         grid-template-columns: 1fr;
     }
 }
+
 .example-card {
     background-color: #fdfdfd;
     border: 1px solid #ddd;
@@ -1309,9 +1251,8 @@ img {
     display: inline-block;
     margin-top: 5px;
 }
-/* Файл style.css - добавьте эти стили в конец файла */
 
-/* Широкие карточки теории */
+/* Широкие карточки теории (calculator1.tpl, calculator2.tpl, calculator3.tpl) */
 .theory-card.wide-card {
     grid-column: span 2;
 }
@@ -1322,7 +1263,7 @@ img {
     }
 }
 
-/* Улучшенные стили для вывода прогноза */
+/* Улучшенные стили для вывода прогноза (calculator3.tpl) */
 .prediction-results {
     display: flex;
     flex-direction: column;
@@ -1340,14 +1281,14 @@ img {
     margin-top: var(--space-md);
 }
 
-/* Стили для результатов */
+/* Стили для результатов (calculator1.tpl, calculator2.tpl, calculator3.tpl) */
 .results-section {
     background-color: #fff;
     border-radius: 12px;
     padding: 24px;
     margin-top: 30px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    display: block; /* Для демонстрации */
+    display: block;
 }
 
 .models-comparison {
@@ -1455,7 +1396,7 @@ img {
         border-bottom-color: #4e42b9;
     }
 
-/* Плейсхолдеры для графиков */
+/* Плейсхолдеры для графиков (calculator1.tpl, calculator2.tpl, calculator3.tpl) */
 .chart-placeholder {
     height: 300px;
     background-color: #f5f5f5;
@@ -1473,7 +1414,8 @@ img {
 .placeholder-text {
     color: #666;
 }
-/* Улучшенные стили для таблиц */
+
+/* Улучшенные стили для таблиц (calculator3.tpl) */
 .prediction-table th,
 .prediction-table td {
     padding: var(--space-sm) var(--space-md);
@@ -1489,7 +1431,7 @@ img {
     background-color: rgba(78, 66, 185, 0.05);
 }
 
-/* Анимации */
+/* Анимации (calculator1.tpl, calculator2.tpl, calculator3.tpl) */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -1525,7 +1467,7 @@ img {
     animation-fill-mode: both;
 }
 
-/* Адаптивные улучшения */
+/* Адаптивные улучшения (calculator1.tpl, calculator2.tpl, calculator3.tpl) */
 @media (max-width: 768px) {
     .models-comparison {
         grid-template-columns: 1fr;
@@ -1540,7 +1482,7 @@ img {
     }
 }
 
-/* Стили для вкладок */
+/* Стили для вкладок (calculator3.tpl) */
 .nav-tabs {
     border-bottom: 2px solid var(--border);
     margin-bottom: var(--space-lg);
@@ -1572,7 +1514,8 @@ img {
 .tab-content {
     padding: var(--space-md) 0;
 }
-/* Стили для линейной регрессии */
+
+/* Стили для линейной регрессии (calculator1.tpl, calculator3.tpl) */
 .linear-model {
     border-left: 4px solid #ff6b35;
 }
@@ -1625,7 +1568,7 @@ img {
     margin-left: 5px;
 }
 
-/* Адаптивные стили */
+/* Адаптивные стили (calculator1.tpl, calculator2.tpl, calculator3.tpl) */
 @media (max-width: 768px) {
     .theory-card.wide-card,
     .example-card.wide-card {
@@ -1641,18 +1584,10 @@ img {
         font-size: 1rem;
     }
 }
-/* Стили для квадратичной регрессии */
-.quadratic-model {
-    border-left: 4px solid #48bb78;
-}
 
-/* Стили для квадратичной регрессии */
+/* Стили для квадратичной регрессии (calculator2.tpl, calculator3.tpl) */
 .quadratic-model {
     border-left: 4px solid #48bb78;
-    background-color: #f8f9fa;
-    padding: 20px;
-    border-radius: 8px;
-    margin-bottom: 25px;
 }
 
 .equation-group {
@@ -1748,7 +1683,7 @@ img {
     font-style: italic;
 }
 
-/* Адаптивные стили */
+/* Адаптивные стили (calculator2.tpl, calculator3.tpl) */
 @media (max-width: 768px) {
     .theory-card.wide-card,
     .example-card.wide-card {
@@ -1765,10 +1700,7 @@ img {
     }
 }
 
-
-
-
-/* СТИЛЬ ТЕОРИИ 3 КАЛЬКУЛЯТОР */
+/* Стили теории 3 калькулятора (calculator3.tpl) */
 .theory-card.wide-card {
     background: #ffffff;
     border-radius: 8px;
@@ -1818,7 +1750,7 @@ img {
         line-height: 1.5;
     }
 
-/* Стили для формул */
+/* Стили для формул (calculator1.tpl, calculator2.tpl, calculator3.tpl) */
 .formula-box {
     background-color: #f8fafc;
     border-radius: 6px;
@@ -1839,7 +1771,7 @@ img {
     font-family: 'Roboto', sans-serif;
 }
 
-/* Шкала корреляции */
+/* Шкала корреляции (calculator3.tpl) */
 .correlation-scale {
     display: flex;
     flex-wrap: wrap;
@@ -1876,7 +1808,7 @@ img {
     color: #5a6376;
 }
 
-/* Предупреждение */
+/* Предупреждение (calculator3.tpl) */
 .warning-box {
     background-color: #fff8e6;
     border-radius: 6px;
@@ -1899,7 +1831,7 @@ img {
         font-weight: 600;
     }
 
-/* Адаптивность */
+/* Адаптивность (calculator3.tpl) */
 @media (max-width: 768px) {
     .theory-card.wide-card {
         padding: 20px;
@@ -1915,15 +1847,149 @@ img {
     }
 }
 
-/* Подсветка важного текста */
+/* Подсветка важного текста (calculator1.tpl, calculator2.tpl, calculator3.tpl) */
 .theory-card strong {
     color: #2e3a59;
     font-weight: 600;
 }
 
-/* Стили для подстрочных индексов */
+/* Стили для подстрочных индексов (calculator1.tpl, calculator2.tpl, calculator3.tpl) */
 sub {
     font-size: 0.7em;
     vertical-align: sub;
     color: #6b7280;
+}
+/* Стили подвала с вашими переменными */
+.site-footer {
+    background-color: var(--primary-dark);
+    color: var(--light);
+    padding: 2rem 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.9rem;
+    margin-top: 3rem; /* добавлено */
+}
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-about, .footer-contact {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-logo {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    color: var(--light);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+    .footer-logo i {
+        color: var(--accent);
+    }
+
+.footer-description {
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+.footer-social {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-link {
+    color: rgba(255, 255, 255, 0.7);
+    transition: color 0.2s;
+    font-size: 1.1rem;
+}
+
+    .social-link:hover {
+        color: var(--accent);
+    }
+
+.footer-title {
+    color: var(--light);
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.footer-contact-info {
+    list-style: none;
+    padding: 0;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+    .footer-contact-info li {
+        margin-bottom: 0.5rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .footer-contact-info i {
+        color: var(--accent);
+        width: 1rem;
+        text-align: center;
+    }
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.copyright, .footer-legal {
+    font-size: 0.8rem;
+}
+
+    .footer-legal a {
+        color: inherit;
+        margin-left: 1rem;
+        text-decoration: none;
+        transition: color 0.2s;
+    }
+
+        .footer-legal a:hover {
+            color: var(--accent);
+        }
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 0.5rem;
+    }
+
+    .footer-legal a {
+        margin: 0 0.5rem;
+    }
 }

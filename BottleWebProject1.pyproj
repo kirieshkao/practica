@@ -63,9 +63,7 @@
     <Content Include="static\images\egor.jpg" />
     <Content Include="static\images\egorr.jpg" />
     <Content Include="static\images\graf.jpg" />
-    <Content Include="static\images\kristina %282%29.jpg" />
-    <Content Include="static\images\kristina%28.jpg" />
-    <Content Include="static\images\kristina.jpg" />
+    <Content Include="static\images\kris.jpg" />
     <Content Include="static\images\linear.jpg" />
     <Content Include="static\images\linear_example.jpg" />
     <Content Include="static\images\maksim.jpg" />

@@ -14,7 +14,6 @@
   <div class="container">
     <div class="hero-content">
       <h1 class="hero-title">Профессиональные инструменты для анализа данных</h1>
-      <p class="hero-subtitle">Решайте сложные математические задачи с помощью современных методов регрессионного анализа</p>
       <div class="hero-buttons">
         <a href="#calculators" class="btn btn-accent">
           <i class="fas fa-calculator"></i> Попробовать калькуляторы
@@ -30,6 +29,7 @@
 <!-- Features Section -->
 <section class="section features-section" id="features">
   <div class="container">
+    
     <h2 class="section-title">Наши преимущества</h2>
     <p class="section-subtitle">Почему MathTools выбирают студенты и преподаватели</p>
     
@@ -73,7 +73,7 @@
 <section class="section steps-section">
   <div class="container">
     <h2 class="section-title">Как работать с нашими инструментами?</h2>
-    <p class="section-subtitle">Простой процесс для получения точных результатов</p>
+    <p class="section-subtitle">Решайте сложные математические задачи с помощью современных методов регрессионного анализа</p>
     
     <div class="steps-container">
       <div class="step">
@@ -219,4 +219,40 @@
       </div>
     </div>
   </div>
+  <footer class="site-footer">
+  <div class="container">
+    <div class="footer-content">
+      <!-- Логотип и описание -->
+      <div class="footer-about">
+        <div class="footer-logo">
+          <i class="fas fa-square-root-alt"></i> MathTools
+        </div>
+        <p class="footer-description">
+          Бесплатные онлайн-калькуляторы для статистического анализа и регрессионного моделирования
+        </p>
+      </div>
+
+      <!-- Контактная информация -->
+      <div class="footer-contact">
+        <h4 class="footer-title">Контакты</h4>
+        <ul class="footer-contact-info">
+          <li><i class="fas fa-envelope"></i> support@mathtools.ru</li>
+          <li><i class="fas fa-phone"></i> +7 (XXX) XXX-XX-XX</li>
+          <li><i class="fas fa-map-marker-alt"></i> Россия, Москва</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Копирайт и дополнительная информация -->
+    <div class="footer-bottom">
+      <div class="copyright">
+        &copy; 2025 MathTools. Все права защищены.
+      </div>
+      <div class="footer-legal">
+        <a href="/privacy">Политика конфиденциальности</a>
+        <a href="/terms">Условия использования</a>
+      </div>
+    </div>
+  </div>
+</footer>
 </section>

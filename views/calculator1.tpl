@@ -129,6 +129,9 @@
           <button class="btn btn-outline" id="clear-data">
             <i class="fas fa-trash"></i> Очистить
           </button>
+          <button class="btn btn-secondary" id="data">
+            <i class="fas fa-random"></i> Данные из файла
+          </button>
         </div>
         
         <div class="data-table-container">
@@ -227,4 +230,41 @@
       </div>
     </div>
   </div>
+    <!-- Подвал сайта -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-content">
+      <!-- Логотип и описание -->
+      <div class="footer-about">
+        <div class="footer-logo">
+          <i class="fas fa-square-root-alt"></i> MathTools
+        </div>
+        <p class="footer-description">
+          Бесплатные онлайн-калькуляторы для статистического анализа и регрессионного моделирования
+        </p>
+      </div>
+
+      <!-- Контактная информация -->
+      <div class="footer-contact">
+        <h4 class="footer-title">Контакты</h4>
+        <ul class="footer-contact-info">
+          <li><i class="fas fa-envelope"></i> support@mathtools.ru</li>
+          <li><i class="fas fa-phone"></i> +7 (XXX) XXX-XX-XX</li>
+          <li><i class="fas fa-map-marker-alt"></i> Россия, Москва</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Копирайт и дополнительная информация -->
+    <div class="footer-bottom">
+      <div class="copyright">
+        &copy; 2025 MathTools. Все права защищены.
+      </div>
+      <div class="footer-legal">
+        <a href="/privacy">Политика конфиденциальности</a>
+        <a href="/terms">Условия использования</a>
+      </div>
+    </div>
+  </div>
+</footer>
 </section>
